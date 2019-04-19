@@ -1,0 +1,16 @@
+.homepage{
+   margin: 0 auto;
+   padding:  0 20px;
+   text-align: center;
+}
+   
+.gutter-example .ant-row > div {
+    background: transparent;
+    border: 0;
+  }
+.gutter-box {
+    background: #efefef;
+    padding: 5px 0;
+    height: 60px;
+    border-radius: 10px;
+}
