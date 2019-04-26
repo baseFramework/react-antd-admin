@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
-import { Form, Select, Row, Col } from 'antd';
+import { Row, Col,Tabs } from 'antd';
 import './Home.css';
 
+import Linechart from '../../components/Linechart/Linechart'
 
-const { Option } = Select;
 
+const TabPane = Tabs.TabPane;
 
 export default class Home extends Component{
     constructor(props){
         super(props)
         this.state = {};
+    }
+
+    orderChange(key){
+      console.log('key:' + key);
     }
 
     render(){
@@ -53,7 +58,21 @@ export default class Home extends Component{
                   </div>
                 </Col>
               </Row>
+
+              <div className="data-content">
+                <div>订单数据部分</div>
+                <Tabs defaultActiveKey="7" onChange={this.orderChange}>
+                  <TabPane tab="7天" key="7">
+                    <Linechart></Linechart>
+                  </TabPane>
+                  <TabPane tab="14天" key="14">Content of Tab Pane 2</TabPane>
+                  <TabPane tab="30天" key="30">Content of Tab Pane 3</TabPane>
+                </Tabs>
+              </div>
+
             </div>
+
+            
         );
     }
 
