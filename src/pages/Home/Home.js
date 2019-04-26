@@ -3,6 +3,7 @@ import { Row, Col,Tabs } from 'antd';
 import './Home.css';
 
 import Linechart from '../../components/Linechart/Linechart'
+import HomeData from '../../datas/HomeData'
 
 
 const TabPane = Tabs.TabPane;
@@ -10,7 +11,11 @@ const TabPane = Tabs.TabPane;
 export default class Home extends Component{
     constructor(props){
         super(props)
-        this.state = {};
+        this.state = {
+          linedata:HomeData.sevenday.data,
+          linecol:HomeData.cols,
+          line14data:HomeData.fourteenday.data
+        };
     }
 
     orderChange(key){
@@ -63,9 +68,11 @@ export default class Home extends Component{
                 <div>订单数据部分</div>
                 <Tabs defaultActiveKey="7" onChange={this.orderChange}>
                   <TabPane tab="7天" key="7">
-                    <Linechart></Linechart>
+                    <Linechart linedata={this.state.linedata}  linecol={this.state.linecol}></Linechart>
                   </TabPane>
-                  <TabPane tab="14天" key="14">Content of Tab Pane 2</TabPane>
+                  <TabPane tab="14天" key="14">
+                     <Linechart linedata={this.state.line14data}  linecol={this.state.linecol}></Linechart>
+                  </TabPane>
                   <TabPane tab="30天" key="30">Content of Tab Pane 3</TabPane>
                 </Tabs>
               </div>
