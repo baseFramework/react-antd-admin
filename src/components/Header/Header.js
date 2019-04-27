@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { Menu, Layout } from "antd";
 import './Header.css'
+import { Link } from 'react-router-dom';
+import HeadData from '../../datas/HeaderData'
+
 
 
 const { Header, Content, Footer } = Layout;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
+const Menus = HeadData.menus;
 
 export default class ComHeader extends Component {
   constructor(props) {
@@ -15,14 +19,35 @@ export default class ComHeader extends Component {
     };
   }
 
+  componentDidMount(){
+    let _me = this;
+    let currentPath = window.location.pathname;
+    for(let i = 0; i < Menus.length; i++){
+      if(currentPath.indexOf(Menus[i].path) > -1){
+        _me.setState({
+          current: Menus[i].key,
+        });
+      }
+    }
+  }
+
   handleClick = (e) => {
-    console.log('click ', e);
     this.setState({
       current: e.key,
     });
+
   }
 
   render() {
+
+    let menus = [];
+    for(let i = 0; i < Menus.length; i++){
+      menus.push(
+          <Menu.Item key={Menus[i].key}>
+              <Link to={Menus[i].path}>{Menus[i].title}</Link>
+          </Menu.Item>)
+    }
+
     return (
       <div>
         	<Header>
@@ -32,24 +57,7 @@ export default class ComHeader extends Component {
                 selectedKeys={[this.state.current]}
                 mode="horizontal"
             >
-                <Menu.Item key="home">
-              概况
-              </Menu.Item>
-              <Menu.Item key="operate">
-                运营
-              </Menu.Item>
-              <Menu.Item key="user">
-                客户
-              </Menu.Item>
-              <Menu.Item key="system">
-                系统
-              </Menu.Item>
-              <Menu.Item key="sale">
-                营销
-              </Menu.Item>
-              <Menu.Item key="order">
-                订单
-              </Menu.Item>
+              {menus}
             </Menu>
             </Header>
       </div>
