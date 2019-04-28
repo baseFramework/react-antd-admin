@@ -4,11 +4,7 @@ import './Header.css'
 import { Link } from 'react-router-dom';
 import HeadData from '../../datas/HeaderData'
 
-
-
-const { Header, Content, Footer } = Layout;
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+const { Header } = Layout;
 const Menus = HeadData.menus;
 
 export default class ComHeader extends Component {

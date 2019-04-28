@@ -7,7 +7,7 @@ export default {
         },
         {
             key:'operate',
-            path:'/operate',
+            path:'/operate/home',
             title:'运营'
         },
         {
