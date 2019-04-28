@@ -42,7 +42,7 @@ export default class Operate extends Component{
                   </Menu>
                 </Sider>
 
-                <Layout style={{ padding: '10px' }}>
+                <Layout style={{ padding: '10px', background: '#fff' }}>
                     <Content style={{
                       background: '#fff', padding: 10, margin: 0, minHeight: 280,
                     }}
