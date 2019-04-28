@@ -23,7 +23,7 @@ export default class Operate extends Component{
                   <Menu
                     mode="inline"
                     defaultSelectedKeys={['1']}
-                    defaultOpenKeys={['sub1']}
+                    defaultOpenKeys={['sub1','sub2']}
                     inlineCollapsed={false}
                     style={{ height: '100%', borderRight: 0 }}
                   >
@@ -50,9 +50,7 @@ export default class Operate extends Component{
                       {this.props.children}
                     </Content>
                   </Layout>
-
               </Layout>
-              
             </div>
         );
     }
