@@ -5,6 +5,11 @@ import { BrowserRouter as Router,} from "react-router-dom";
 import { Layout,} from 'antd';
 import ComHeader from './components/Header/Header'
 import MyRouter from './router'
+import { Provider } from 'mobx-react'
+
+import store from './stores/index'
+
+
 
 
 const AppLayout = () =>{
@@ -17,10 +22,12 @@ const AppLayout = () =>{
 }
 
 const App = () => (
-<Router>
-			<AppLayout></AppLayout>
-			<MyRouter></MyRouter>
-</Router>
-);
+	<Provider {...store}>
+		<Router>
+					<AppLayout></AppLayout>
+					<MyRouter></MyRouter>
+		</Router>
+	</Provider>
 
+);
 export default App;

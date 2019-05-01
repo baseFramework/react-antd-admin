@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
+import { observer,inject } from 'mobx-react'
 import {
     Form, Icon, Input, Button,Table
   } from 'antd';
-
-
 
   const columns = [{
     title: 'Name',
@@ -16,17 +15,11 @@ import {
     dataIndex: 'address',
   }];
   
-  const data = [];
-  for (let i = 0; i < 46; i++) {
-    data.push({
-      key: i,
-      name: `Edward King ${i}`,
-      age: 32,
-      address: `London, Park Lane no. ${i}`,
-    });
-  }
-
-export default class OHome extends Component{
+@inject(stores => ({
+    operateStore: stores.operateStore,
+}))
+@observer
+class OHome extends Component{
     constructor(props){
         super(props)
     }
@@ -54,10 +47,13 @@ export default class OHome extends Component{
 
     render(){
         const { loading, selectedRowKeys } = this.state;
+    
+        let operateStore = this.props.operateStore
         const rowSelection = {
             selectedRowKeys,
             onChange: this.onSelectChange,
           };
+          console.log( operateStore.getHomeList);
 
         return (
             <div>
@@ -77,9 +73,11 @@ export default class OHome extends Component{
                     </Form.Item>
                 </Form>
 
-                <Table columns={columns} dataSource={data} style={{marginTop:'20px'}}/>
+                <Table columns={columns} dataSource={ operateStore.getHomeList} style={{marginTop:'20px'}}/>
             </div>
         );
     }
 
 }
+
+export default OHome
