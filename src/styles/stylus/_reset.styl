@@ -1,0 +1,42 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td
+  margin:0;
+  padding:0;
+  font-size: 12px;
+h1, h2, h3, h4, h5, h6
+  font-weight:normal;
+  font-size:100%;
+address, caption, cite, code, dfn, em, strong, th, var
+  font-style:normal; font-weight:normal;
+a
+  text-decoration:none;
+  &:hover
+    text-decoration:none;
+img
+  border:none;
+ol,ul,li
+  list-style:none;
+input, textarea, select, button
+  font-size:12px;
+span, li, input, textarea, select, button
+  &:active
+    outline: none;
+  &:focus
+    outline: none;
+button
+  &[disabled = 'disabled']
+    cursor: not-allowed;
+*
+  &:focus,
+  &:active
+    outline: none;
+  &::before,
+  &::after
+    box-sizing: border-box !important;
+table
+  border-collapse:collapse;
+html
+  overflow-y: auto;
+html,body
+  width:100%;height:100%;
+label
+  font-weight: normal;

@@ -1,0 +1,201 @@
+:global
+  input
+    background-color: transparent;
+
+  .ant-table
+    color: rgba(255, 255, 255, .8);
+
+  .ant-table-small
+    border: 0;
+    border-radius: 0;
+
+    &.ant-table-bordered
+      & > .ant-table-content
+        border-right: 0;
+      &.ant-table-fixed-header 
+        .ant-table-scroll
+          .ant-table-header
+            &::-webkit-scrollbar
+              border: 0;
+
+    & > .ant-table-content
+      .ant-table-placeholder
+        width: calc(100% - 8px);
+        background-color: rgb(30, 66, 117);
+        border-top: 1px solid rgb(7, 21, 66);
+
+        .ant-empty-image
+          & > img
+            filter: invert(.3);
+
+        .ant-empty-description
+          color: rgba(255, 255, 255, .8);
+
+      & > .ant-table-scroll
+        & > .ant-table-header
+          background-color: rgb(30, 66, 117);
+          overflow: hidden !important;
+          width: calc(100% - 8px);
+          height 35px;
+          margin-bottom: 0 !important;
+          & > table
+            & > .ant-table-thead
+              & > tr
+                border-bottom: 1px solid rgb(7, 21, 66);
+                &:first-child
+                  & > th
+                    &:first-child
+                      border-top-left-radius: 0;
+                & > th
+                  color: rgba(255, 255, 255, .8);
+                  border-right: 1px solid rgb(7, 21, 66);
+                  border-bottom: 1px solid rgb(7, 21, 66);
+
+        & > .ant-table-body
+          background: transparent;
+          & > table
+            & > .ant-table-tbody
+              & > tr
+                &:nth-child(2n+1) 
+                  background-color: rgb(13, 46, 94);
+                &:nth-child(2n+2)
+                  background-color: rgb(17, 51, 100);
+                & > td
+                  border-right: 1px solid rgb(7, 21, 66);
+                  border-bottom: 1px solid rgb(7, 21, 66);
+
+  .ant-modal-mask
+    background-color: #071541;
+    opacity .8;
+
+  .ant-modal-wrap
+    .ant-modal
+      .ant-modal-content
+        border-radius: 0;
+        background-color: rgb(5, 29, 76);
+        border: 1px solid #00A7FF;
+
+        .ant-modal-close
+          line-height: 48px;
+
+          .ant-modal-close-x
+            width: 48px;
+            height 48px;
+            line-height: 48px;
+
+            & > i 
+              color: rgba(255, 255, 255, .8);
+
+        .ant-modal-header
+          padding: 0 15px;
+          height 48px;
+          background: -webkit-linear-gradient(left, rgba(46, 163, 243, 1), rgba(46, 163, 243, .2));
+          color: rgba(255, 255, 255, .8);
+          border: 0;
+          border-radius: 0;
+          display: flex;
+          align-items: center;
+
+          .ant-modal-title
+            color: rgba(255, 255, 255, .8);
+
+        .ant-modal-body
+          
+        .ant-modal-footer
+          border-top: 0;
+          border-radius: 0;
+
+          & > div
+            & > button 
+              &:nth-child(1)
+                background-color: rgba(41, 157, 242, .3);
+                border: 0;
+                & > span 
+                  color: rgba(255, 255, 255, .8);
+
+              &:nth-child(2)
+                background-color: rgba(41, 157, 242, 1);
+                border: 0;
+                & > span 
+                  color: rgba(255, 255, 255, .8);
+
+  .ant-input,
+  .ant-input[disabled]
+    background-color: transparent;
+    border: 0;
+    font-size 12px;
+    border-bottom: 1px solid rgb(36, 62, 100);
+    border-radius: 0;
+    color: rgba(255, 255, 255, .8);
+
+    &:focus,
+    &:active
+      border-color: rgb(36, 62, 100);
+      box-shadow: none;
+
+  .ant-select
+    .ant-select-selection
+      background-color: transparent;
+      font-size 12px;
+      color: rgba(255, 255, 255, .8);
+      border: 0;
+      border-bottom: 1px solid rgb(36, 62, 100);
+      border-radius: 0;
+
+      .ant-select-arrow
+        color: rgba(255, 255, 255, .8);
+
+      &:focus,
+      &:active
+        border-color: rgb(36, 62, 100);
+        box-shadow: none;
+
+  .ant-select-dropdown-menu-item 
+    color: rgba(255, 255, 255, .8);
+    background-color: rgba(35, 81, 157, 1);
+  .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled),
+  .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled),
+  .ant-select-dropdown-menu-item:hover,
+  .ant-select-dropdown-menu-item-selected
+    background-color: rgba(40, 152, 240, 1.00);
+    color: rgba(255, 255, 255, .8);
+
+  .ant-pagination
+    .ant-pagination-prev,
+    .ant-pagination-next
+      & > a
+        background-color: #1B2D59;
+        color: rgba(255, 255, 255, .8);
+        border: 0;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .3);
+
+    .ant-pagination-item
+      border: 0;
+      overflow: hidden;
+      & > a
+        width: 100%;
+        height 100%;
+        background-color: #1B2D59;
+        color: rgba(255, 255, 255, .8);
+        border: 0;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .3);
+
+      &.ant-pagination-item-active,
+      &:hover
+        & > a
+          background-color: #299DF2;
+
+  .ant-modal-confirm-body-wrapper
+    .ant-modal-confirm-body
+      & > span,
+      & > .ant-modal-confirm-content
+        color: rgba(255, 255, 255, .8);
+
+  .ant-tabs
+    color: rgba(255, 255, 255, .8);
+
+  .ant-breadcrumb a 
+    color: rgba(255, 255, 255, .8);
+
+  .ant-breadcrumb-separator
+    color: rgba(255, 255, 255, .8);

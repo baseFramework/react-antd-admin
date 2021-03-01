@@ -1,0 +1,88 @@
+:global .header-main
+  width 100%
+  height 60px
+  display flex
+  position relative
+  z-index 1001
+
+  .left-box
+    width calc(50% - 300px)
+    height 100%
+    display flex
+    align-items flex-end
+    padding-left 16px
+    padding-bottom 10px
+
+    .op-box
+      width 52px
+      display flex
+      cursor pointer
+      justify-content space-between
+      align-items center
+
+      & > i
+        display block
+        width 20px
+        height 20px
+
+      & > span
+        font-size 16px
+        color #62AEFF
+
+    .go-home
+      color #62aeff
+      font-size 16px
+      margin-left 10px
+      display flex
+      cursor pointer
+      justify-content space-between
+      align-items center
+
+  .mid-box
+    width 600px
+    height 100%
+    display flex
+    justify-content center
+    align-items center
+
+    .title
+      // width: 500px;
+      height 100%
+      display flex
+      justify-content center
+      align-items center
+
+      .home-logo
+        width 60px
+        height 100%
+        margin-top 14px
+
+      .title-text
+        font-size 38px
+        background -webkit-linear-gradient(top, #9BD7FF, #6298FF) /* 背景色渐变 */
+        -webkit-background-clip text /* 规定背景的划分区域 */
+        -webkit-text-fill-color transparent /* 防止字体颜色覆盖 */
+
+  .right-box
+    width calc(50% - 300px)
+    height 100%
+    display flex
+    justify-content flex-end
+    align-items flex-end
+    padding 0 20px 10px 0
+    color #62AEFF
+    font-size 16px
+
+    .place
+      margin-right 10px
+
+    .time
+      font-size 16px
+
+    .logout
+      margin-left 10px
+      margin-bottom 2px
+      padding-left 20px
+      background-position left
+      background-repeat no-repeat
+      cursor pointer

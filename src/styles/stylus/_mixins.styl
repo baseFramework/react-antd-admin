@@ -1,0 +1,15 @@
+root_url = '../../assets'
+
+base_bg($url)
+  $res = root_url + '/' + $url
+  background-position center
+  background-repeat no-repeat
+  background-image url($res)
+
+icon(url)
+  background-size 100% 100%
+  base_bg(url)
+
+bg(url)
+  background-size cover
+  base_bg(url)

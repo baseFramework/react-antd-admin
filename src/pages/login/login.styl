@@ -1,0 +1,96 @@
+:global .login-main
+  width 100%
+  height 100%
+  display flex
+  align-items center
+  justify-content center
+
+  .login-form
+    width 780px
+    height 600px
+    padding 110px 80px
+
+    .login-logo
+      width 100%
+      height 60px
+      display flex
+      align-items center
+      justify-content space-around
+
+      & > i
+        display block
+        width 60px
+        height 64px
+
+      & > span
+        font-size 37px
+        color #fff
+        margin-left -60px
+
+    .form-con
+      width 100%
+      margin-top 72px
+
+      .has-error
+        .ant-input-prefix
+          color rgba(245, 34, 45, 0.8)
+
+        .ant-form-explain
+          color rgba(245, 34, 45, 0.8)
+
+        .placerholder-color
+          color rgba(245, 34, 45, 0.6)
+
+        .ant-input
+          background-color rgba(245, 34, 45, 0.2)
+
+          &:focus
+            box-shadow none
+
+      .ant-input-prefix
+        color #fff
+
+      .ant-input
+        background-color rgba(41, 157, 242, 0.14)
+        color rgba(255, 255, 255, 0.6)
+        border-radius 1px
+        border 0
+        height 48px
+
+        &:focus
+          box-shadow none
+
+        &::placeholder
+          color rgba(255, 255, 255, 0.4)
+
+      .forgot-box
+        .ant-checkbox-wrapper
+          .ant-checkbox
+            .ant-checkbox-inner
+              background-color transparent
+              border 1px solid #809EB3
+
+          & > span
+            &:last-child
+              color #fff
+
+      .sub-box
+        width 100%
+        height 70px
+        display flex
+        align-items center
+        justify-content space-between
+
+        .ant-btn
+          width 298px
+          height 66px
+          background-color transparent
+          border 0
+
+          &[ant-click-animating-without-extra-node='true']
+            &::after
+              box-shadow none
+              opacity 0
+          & > span
+            font-size 24px
+    

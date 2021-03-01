@@ -1,0 +1,33 @@
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active
+  transition-delay 9999999999999s
+  transition color 9999999999999s ease-out, background-color 9999999999999s ease-out
+
+::-webkit-scrollbar-button
+  display none
+  width 0
+  height 0
+
+::-webkit-scrollbar-corner
+  background-color transparent
+
+::-webkit-scrollbar
+  width 8px
+  height 8px
+
+::-webkit-scrollbar-track
+  border-radius 4px
+
+::-webkit-scrollbar-thumb
+  border-radius 4px
+  background-color rgba(150, 150, 150, 0.3)
+
+ellipsis_num(line)
+  display -webkit-box
+  -webkit-line-clamp line
+  -webkit-box-orient vertical
+  overflow hidden
+
+.text-ellipsis
+  white-space nowrap
+  text-overflow ellipsis
+  overflow hidden

@@ -1,0 +1,114 @@
+:global .root
+  width 100%
+  height 100%
+
+  .app
+    width 100%
+    height 100%
+
+    .spin-main
+      position fixed
+      width 100%
+      height 100%
+      top 0
+      background-color rgba(0, 0, 0, 0.4)
+      display flex
+      align-items center
+      justify-content center
+      z-index 9999
+
+    .loading-box
+      position fixed
+      display none
+      width 100%
+      height 100%
+      top 0
+      background-color rgba(0, 0, 0, 0.6)
+      align-items center
+      justify-content center
+      z-index 9999
+
+      &.show
+        display flex
+
+    .main
+      width 100%
+      height 100%
+
+      .main-body
+        position relative
+        width 100%
+        height calc(100% - 63px)
+
+        .menu-slide
+          position fixed
+          display none
+          width 100%
+          height 100%
+          top 0
+          background-color rgba(0, 0, 0, 0.4)
+          align-items center
+          justify-content center
+          z-index 9999
+
+          &.show
+            display flex
+
+        .main
+          width 100%
+          height 100%
+
+          .ant-menu-dark .ant-menu-item
+            color red
+
+          .main-body
+            position relative
+            width 100%
+            height calc(100% - 63px)
+
+            .menu-slide
+              position fixed
+              top 10%
+              left 0
+              height 100%
+              width 20px
+              z-index 102
+
+            .left-menu
+              position absolute
+              width 200px
+              height calc(100% + 10px)
+              top -10px
+              z-index 1001
+              overflow-x hidden
+              transition 500ms
+              background-color #132C68
+              box-shadow 0 1px 19px 0 rgba(9, 165, 248, 0.45) inset
+
+              &.unexpand
+                transform translateX(-200px)
+
+              .ant-menu
+                width 100%
+                height 100%
+                background-color transparent
+
+                .menu-name
+                  margin-left -10px
+
+                &.ant-menu-sub
+                  background-color #061643
+                  background #061643
+
+                  .menu-name
+                    margin-left -20px
+
+            .right-body
+              position relative
+              width 100%
+              height 100%
+              z-index 100
+
+              .main-route
+                width 100%
+                height 100%
