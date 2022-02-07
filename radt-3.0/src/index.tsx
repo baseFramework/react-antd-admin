@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import { Provider } from 'mobx-react'
+// import stores from './stores'
+// import services from './services'
+import { BrowserRouter } from "react-router-dom";
+// import AppRouter from './routers'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     <BrowserRouter basename={'/'}>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
