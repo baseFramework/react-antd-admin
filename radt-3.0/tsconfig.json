@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "es2017",
+      "webworker"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es5",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "types": [
+      "jest",
+      "webpack-env"
+    ],
+    "sourceRoot": "/",
+    "sourceMap": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true
+  },
+  "extends": "./path.tsconfig.json",
+  "include": [
+    "src"
+  ]
+}
