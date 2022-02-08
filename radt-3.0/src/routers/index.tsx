@@ -1,6 +1,5 @@
 
-import { useRoutes } from "react-router-dom";
-import Demo from "../pages/Demo";
+import { useRoutes, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import Login from "../pages/Login";
@@ -11,9 +10,9 @@ const Router = () => {
       path: "/",
       element: <Home />,
     },
-    { path: "/demo", element: <Demo /> },
     { path: "/login", element: <Login /> },
-    { path: "*", element: <NotFound /> },
+    { path: "/404", element: <NotFound /> },
+    { path: "*", element:<Navigate to="/404" /> },
   ]);
 };
 
